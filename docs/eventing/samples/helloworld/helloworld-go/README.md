@@ -34,6 +34,7 @@ cd knative-docs/docs/eventing/samples/helloworld/helloworld-go
    code creates a basic web server which listens on port 8080:
 
    ```go
+    package main
     import (
         "context"
         "log"
@@ -197,6 +198,12 @@ cd knative-docs/docs/eventing/samples/helloworld/helloworld-go
           apiVersion: v1
           kind: Service
           name: helloworld-go
+   ```
+
+1. Use the go tool to create a [`go.mod`](https://github.com/golang/go/wiki/Modules#gomod) manifest.
+
+   ```shell
+   go mod init github.com/knative/docs/docs/serving/samples/hello-world/helloworld-go
    ```
 
 ## Building and deploying the sample
